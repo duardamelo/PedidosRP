@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Pedidos - Confirmação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- === Barra de navegação inferior === -->
+<nav class="barra-navegacao">
+    <a href="cardapio.html" class="item-navegacao" title="Cardápio">
+      <i data-lucide="shopping-cart"></i>
+    </a>
+  
+    <a href="pedido.html" class="item-navegacao" title="Fazer Pedido">
+      <i data-lucide="banknote"></i>
+    </a>
+  
+    <a href="confirmacao.html" class="item-navegacao" title="Feedback">
+      <i data-lucide="message-square"></i>
+    </a>
+  
+    <a href="perfil.html" class="item-navegacao" title="Perfil">
+      <i data-lucide="user"></i>
+    </a>
+  </nav>
+  
+  <!-- Scripts dos ícones -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  
+<body>
+
+  <header class="cabecalho-confirmacao">
+    <h1>Pedido Confirmado ✅</h1>
+  </header>
+
+  <main class="conteudo-confirmacao">
+    <section class="caixa-confirmacao">
+      <h2>Detalhes do Pedido</h2>
+
+      <div class="info-confirmacao">
+        <p><strong>Pedido:</strong> Almoço R$ 1,00</p>
+        <p><strong>Código do Pedido:</strong> 01</p>
+        <p><strong>Status:</strong> Pagamento Confirmado</p>
+      </div>
+
+      <div class="descricao-confirmacao">
+        <h3>Prato Completo</h3>
+        <p>Feijão, Arroz, Proteína, Salada e Suco</p>
+      </div>
+
+      <div class="feedback">
+        <h3>Escreva seu feedback:</h3>
+        <textarea id="feedback" placeholder="Digite seu comentário..." rows="4"></textarea>
+        <button class="botao-enviar">Enviar Feedback</button>
+      </div>
+
+      <div class="voltar">
+        <a href="cardapio.html" class="botao-voltar-cardapio">Voltar ao Cardápio</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
