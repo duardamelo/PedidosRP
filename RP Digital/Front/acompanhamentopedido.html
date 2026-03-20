@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RP Digital - Acompanhamento do Pedido</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f8;
+}
+
+/* HEADER */
+
+header{
+background:#2e7d32;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:800px;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.titulo{
+font-size:26px;
+margin-bottom:10px;
+}
+
+.info{
+color:#666;
+margin-bottom:30px;
+}
+
+/* STATUS */
+
+.status-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:40px;
+}
+
+.status{
+text-align:center;
+flex:1;
+}
+
+.circulo{
+width:40px;
+height:40px;
+border-radius:50%;
+background:#ccc;
+margin:0 auto 10px auto;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:bold;
+}
+
+.ativo{
+background:#2e7d32;
+}
+
+.linha{
+height:4px;
+background:#ccc;
+flex:1;
+margin:0 10px;
+}
+
+/* MENSAGEM */
+
+.mensagem{
+margin-top:40px;
+font-size:18px;
+color:#2e7d32;
+font-weight:bold;
+}
+
+.botao{
+margin-top:30px;
+background:#2e7d32;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.botao:hover{
+background:#256628;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">RP DIGITAL</div>
+
+<nav>
+<a href="#">Cardápio</a>
+<a href="#">Meus Pedidos</a>
+<a href="#">Perfil</a>
+<a href="#">Sair</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="titulo">Pedido #1023</div>
+<div class="info">Horário de retirada: 12:00</div>
+
+<div class="status-container">
+
+<div class="status">
+<div class="circulo ativo">✓</div>
+<p>Recebido</p>
+</div>
+
+<div class="linha"></div>
+
+<div class="status">
+<div class="circulo ativo">✓</div>
+<p>Em preparo</p>
+</div>
+
+<div class="linha"></div>
+
+<div class="status">
+<div class="circulo">3</div>
+<p>Pronto</p>
+</div>
+
+</div>
+
+<div class="mensagem">
+Seu pedido está sendo preparado
+</div>
+
+<button class="botao">Voltar ao Cardápio</button>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RP Digital - Pedido</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f8;
+}
+
+/* HEADER */
+
+header{
+background:#2e7d32;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:900px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 3px 15px rgba(0,0,0,0.08);
+}
+
+.titulo{
+font-size:24px;
+margin-bottom:20px;
+}
+
+/* TABELA */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-bottom:20px;
+}
+
+th, td{
+padding:12px;
+border-bottom:1px solid #eee;
+text-align:left;
+}
+
+th{
+background:#f2f2f2;
+}
+
+.total{
+text-align:right;
+font-size:18px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* HORARIO */
+
+.horario{
+margin-top:25px;
+}
+
+.horario label{
+margin-right:10px;
+}
+
+/* PAGAMENTO */
+
+.pagamento{
+margin-top:25px;
+}
+
+.pagamento label{
+display:block;
+margin-top:8px;
+}
+
+/* BOTÃO */
+
+.botao{
+margin-top:30px;
+background:#2e7d32;
+color:white;
+border:none;
+padding:14px;
+width:100%;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.botao:hover{
+background:#256628;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">RP DIGITAL</div>
+
+<nav>
+<a href="#">Cardápio</a>
+<a href="#">Meus Pedidos</a>
+<a href="#">Perfil</a>
+<a href="#">Sair</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="titulo">Seu Pedido</div>
+
+<table>
+
+<tr>
+<th>Item</th>
+<th>Quantidade</th>
+<th>Preço</th>
+</tr>
+
+<tr>
+<td>Prato do Dia</td>
+<td>1</td>
+<td>R$ 1,00</td>
+</tr>
+
+<tr>
+<td>Suco Natural</td>
+<td>1</td>
+<td>R$ 1,00</td>
+</tr>
+
+</table>
+
+<div class="total">
+Total: R$ 2,00
+</div>
+
+<div class="horario">
+<h3>Horário de retirada</h3>
+
+<label><input type="radio" name="hora"> 11:30</label> <label><input type="radio" name="hora"> 12:00</label> <label><input type="radio" name="hora"> 12:30</label>
+
+</div>
+
+<div class="pagamento">
+<h3>Forma de pagamento</h3>
+
+<label>
+<input type="radio" name="pagamento"> Pix
+</label>
+
+<label>
+<input type="radio" name="pagamento"> Dinheiro em espécie
+</label>
+
+</div>
+
+<button class="botao">Confirmar Pedido</button>
+
+</div>
+
+</body>
+</html>

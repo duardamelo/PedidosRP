@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RP Digital - Cardápio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f6f8;
+}
+
+/* HEADER */
+
+header{
+background:#2e7d32;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* CONTEÚDO */
+
+.container{
+max-width:1000px;
+margin:40px auto;
+padding:20px;
+}
+
+.titulo{
+font-size:24px;
+margin-bottom:30px;
+color:#333;
+}
+
+/* CARDS */
+
+.cardapio{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+box-shadow:0 3px 15px rgba(0,0,0,0.08);
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.info{
+max-width:70%;
+}
+
+.nome{
+font-size:18px;
+font-weight:bold;
+color:#333;
+}
+
+.descricao{
+font-size:14px;
+color:#666;
+margin:8px 0;
+}
+
+.preco{
+font-size:16px;
+font-weight:bold;
+color:#2e7d32;
+}
+
+.botao{
+background:#2e7d32;
+color:white;
+border:none;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+.botao:hover{
+background:#256628;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.cardapio{
+grid-template-columns:1fr;
+}
+
+header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+nav{
+margin-top:10px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">RP DIGITAL</div>
+
+<nav>
+<a href="#">Cardápio</a>
+<a href="#">Meus Pedidos</a>
+<a href="#">Perfil</a>
+<a href="#">Sair</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="titulo">Cardápio do Dia - 13/03/2026</div>
+
+<div class="cardapio">
+
+<div class="card">
+<div class="info">
+<div class="nome">Prato do Dia</div>
+<div class="descricao">Arroz, feijão, frango grelhado e salada</div>
+<div class="preco">R$ 1,00</div>
+</div>
+<button class="botao">Adicionar</button>
+</div>
+
+<div class="card">
+<div class="info">
+<div class="nome">Prato Vegetariano</div>
+<div class="descricao">Arroz, feijão, legumes grelhados</div>
+<div class="preco">R$ 1,00</div>
+</div>
+<button class="botao">Adicionar</button>
+</div>
+
+<div class="card">
+<div class="info">
+<div class="nome">Sobremesa</div>
+<div class="descricao">Fruta da estação</div>
+<div class="preco">R$ 0,50</div>
+</div>
+<button class="botao">Adicionar</button>
+</div>
+
+<div class="card">
+<div class="info">
+<div class="nome">Suco Natural</div>
+<div class="descricao">Suco de acerola natural</div>
+<div class="preco">R$ 1,00</div>
+</div>
+<button class="botao">Adicionar</button>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
