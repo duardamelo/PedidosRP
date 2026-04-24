@@ -1,0 +1,101 @@
+/* src/components/cardapio/Cardapio.css */
+
+.cardapio-body {
+  background: #f4f6f8;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header.rp-header {
+  background: #2e7d32;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rp-header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.rp-header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.container-cardapio {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.titulo-cardapio {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.grid-cardapio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card-rp {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-rp {
+  max-width: 70%;
+}
+
+.nome-item {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.desc-item {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.preco-item {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.btn-add {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-add:hover {
+  background: #256628;
+}
+
+/* Responsivo */
+@media(max-width: 768px) {
+  .grid-cardapio { grid-template-columns: 1fr; }
+  header.rp-header { flex-direction: column; align-items: flex-start; }
+  .rp-header nav { margin-top: 10px; }
+}
