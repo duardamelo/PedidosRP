@@ -1,0 +1,230 @@
+/* RESET E ESTILOS GERAIS */
+.cliente-body {
+  background: #f4f6f8;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.cliente-header {
+  background: #2e7d32;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cliente-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* CARDS DO CARDÁPIO */
+.cardapio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-verde {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-verde:hover { background: #256628; }
+
+/* ACOMPANHAMENTO (STATUS) */
+.status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.circulo {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 10px;
+}
+
+.circulo.ativo { background: #2e7d32; }
+
+.linha-progresso {
+  height: 4px;
+  background: #ccc;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.linha-progresso.ativa { background: #2e7d32; }
+
+/* TABELAS DE PEDIDO */
+.tabela-pedido {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 20px;
+}
+
+.tabela-pedido th, .tabela-pedido td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+
+/* TELA DE PEDIDO (CHECKOUT) */
+.tabela-pedido {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tabela-pedido th, .tabela-pedido td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.tabela-pedido th {
+  background: #f2f2f2;
+}
+
+.total-secao {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.secao-opcoes {
+  margin-top: 25px;
+}
+
+.secao-opcoes h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.secao-opcoes label {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.pagamento-opcoes label {
+  display: block;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/* TELA DE LOGIN DO CLIENTE */
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f4f7;
+}
+
+.auth-card {
+  background: white;
+  padding: 40px;
+  width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.auth-form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.auth-form-group label {
+  font-size: 14px;
+  color: #333;
+}
+
+.auth-form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.auth-form-group input:focus {
+  border-color: #2e7d32;
+}
+
+.btn-auth {
+  width: 100%;
+  background: #2e7d32;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-auth:hover {
+  background: #256628;
+}
+
+.auth-links {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.auth-links span {
+  color: #2e7d32;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-footer {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #888;
+}
