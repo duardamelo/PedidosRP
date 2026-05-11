@@ -18,17 +18,21 @@ function Login() {
     setCarregando(true);
 
     try {
-      await login(email, senha);
-      navigate("/dashboard");
-    } catch (error) {
-      console.error(error.code);
-      // Tratamento de erros amigável
-      if (error.code === "auth/invalid-credential" || error.code === "auth/user-not-found") {
-        setErro("Email ou senha incorretos.");
-      } else if (error.code === "auth/too-many-requests") {
-        setErro("Muitas tentativas falhas. Tente novamente mais tarde.");
+      const usuarioLogado = await login(email, senha);
+
+      if (usuarioLogado.tipo === 'funcionario') {
+        navigate("/dashboard");
+      } else if (usuarioLogado.tipo === 'cliente') {
+        navigate("/cardapio");
       } else {
-        setErro("Erro ao acessar o sistema. Verifique sua conexão.");
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Erro no login:", error.code);
+      if (error.code === "auth/invalid-credential") {
+        setErro("Email ou senha incorretos.");
+      } else {
+        setErro("Erro ao acessar o sistema.");
       }
     } finally {
       setCarregando(false);
@@ -45,7 +49,8 @@ function Login() {
 
         {erro && <div className="error-message">{erro}</div>}
 
-        <form onSubmit={handleLogin} className="login-form">
+        <form onSubmit={handleLogin} className="login-form" autoComplete="off">
+          
           <div className="form-group">
             <label>E-mail Corporativo</label>
             <input 

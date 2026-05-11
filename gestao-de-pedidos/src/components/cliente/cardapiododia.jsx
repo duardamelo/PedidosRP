@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/Cliente.css';
+import '../styles/Cliente.css';
 
 const Cardapio = () => {
   // Lógica: Simulando dados que virão do Firestore

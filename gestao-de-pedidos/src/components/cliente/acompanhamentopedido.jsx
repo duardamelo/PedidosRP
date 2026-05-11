@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/Cliente.css';
+import '../styles/Cliente.css';
 
 const Acompanhamento = () => {
   // Lógica: O status mudará conforme o Admin atualizar no dashboard
