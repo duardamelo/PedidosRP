@@ -10,7 +10,8 @@ import Feedback from "./components/feedback";
 import Pedidos from "./components/pedidos";
 import Layout from "./components/layout";
 import Acompanhamento from './components/cliente/acompanhamentopedido';
-import CardapioDigital from './components/cliente/cardapiododia';
+import CardapioDigital from './components/cliente/cardapioCliente';
+import CardapioCliente from "./components/cardapio"; // Ou o nome do seu arquivo de cardápio
 
 import "./App.css";
 
@@ -28,26 +29,20 @@ const { usuario, carregando } = useAuth();
   return (
     <div className="App">
       <Routes>
-        {/* Rota Inicial e Pública */}
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
 
-        {/* Rotas de Cliente (Só acessa se for cliente) */}
-        <Route path="/cardapio" element={
-          isCliente ? <CardapioDigital /> : <Navigate to="/login" />
-        } />
-        <Route path="/acompanhamento" element={
-          isCliente ? <Acompanhamento /> : <Navigate to="/login" />
-        } />
+        {/* Rota do Cliente - Aberta temporariamente para teste */}
+        <Route path="/cardapio" element={<CardapioDigital />} /> 
+        <Route path="/acompanhamento" element={<Acompanhamento />} />
 
-        {/* Rotas de Funcionário / Admin (Envolvidas pelo Layout) */}
-        <Route path="/dashboard" element={isFuncionario ? <Layout><Home /></Layout> : <Navigate to="/login" />} />
-        <Route path="/estoque" element={isFuncionario ? <Layout><Estoque /></Layout> : <Navigate to="/login" />} />
-        <Route path="/pedidos" element={isFuncionario ? <Layout><Pedidos /></Layout> : <Navigate to="/login" />} />
-        <Route path="/feedback" element={isFuncionario ? <Layout><Feedback /></Layout> : <Navigate to="/login" />} />
+        {/* Rotas de Funcionário - Abertas temporariamente para pular o login */}
+        <Route path="/dashboard" element={<Layout><Home /></Layout>} />
+        <Route path="/estoque" element={<Layout><Estoque /></Layout>} />
+        <Route path="/pedidos" element={<Layout><Pedidos /></Layout>} />
+        <Route path="/feedback" element={<Layout><Feedback /></Layout>} />
 
-        {/* Rota de escape para qualquer endereço errado */}
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </div>

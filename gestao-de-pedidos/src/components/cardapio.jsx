@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react"
-import { db } from "../firebase"
+import { db } from "../services/firebase"
 import { collection,getDocs } from "firebase/firestore"
 
 export default function Cardapio(){
