@@ -11,12 +11,11 @@ import Pedidos from "./components/pedidos";
 import Layout from "./components/layout";
 import Acompanhamento from './components/cliente/acompanhamentopedido';
 import CardapioDigital from './components/cliente/cardapioCliente';
-import CardapioCliente from "./components/cardapio"; // Ou o nome do seu arquivo de cardápio
+import CardapioCliente from "./components/cardapio";
 
 import "./App.css";
 
 function App() {
-  // Puxamos os dados do usuário direto do seu Contexto
 const { usuario, carregando } = useAuth();
 
   if (carregando) return <p>Carregando...</p>;
@@ -44,6 +43,8 @@ const { usuario, carregando } = useAuth();
         <Route path="/feedback" element={<Layout><Feedback /></Layout>} />
 
         <Route path="*" element={<Navigate to="/login" />} />
+
+        <Route path="/estoque" element={<Estoque />} />
       </Routes>
     </div>
   );
